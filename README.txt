@@ -54,18 +54,11 @@ REFERENCIA
 Metro: Islas Filipinas (L7) · Canal (L2)
 Aparcamiento público: a pocos metros de C. Blasco de Garay, 61
 
-IMPORTANTE
-No se proporcionó el dominio público de SurfaceLabs en esta solicitud.
-Por ese motivo NO se inventó:
-- canonical
-- URL absoluta de sitemap
-- dominio en Schema (falta la propiedad "url")
-
-Cuando se proporcione el dominio, hay que añadirlo antes de publicar definitivamente.
-NOTA: en el repositorio TechMac apareció una línea de contacto de prueba
-apuntando a "info@surface-reparacion-servicio-tecnico.info" — es posible
-que ese fuera el dominio real pensado para SurfaceLabs. Confirmar antes
-de darlo por bueno.
+DOMINIO
+https://surface-reparacion-servicio-tecnico.info/
+Confirmado por el cliente (coincidía con el correo de prueba que había
+aparecido filtrado en el repositorio TechMac). Aplicado en canonical,
+og:url, robots.txt, sitemap.xml y el "url" del JSON-LD.
 
 REVISIÓN (fixes aplicados):
 - Menú móvil: no existía botón de menú en móvil (.navlinks se ocultaba
