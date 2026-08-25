@@ -59,6 +59,25 @@ No se proporcionó el dominio público de SurfaceLabs en esta solicitud.
 Por ese motivo NO se inventó:
 - canonical
 - URL absoluta de sitemap
-- dominio en Schema
+- dominio en Schema (falta la propiedad "url")
 
 Cuando se proporcione el dominio, hay que añadirlo antes de publicar definitivamente.
+NOTA: en el repositorio TechMac apareció una línea de contacto de prueba
+apuntando a "info@surface-reparacion-servicio-tecnico.info" — es posible
+que ese fuera el dominio real pensado para SurfaceLabs. Confirmar antes
+de darlo por bueno.
+
+REVISIÓN (fixes aplicados):
+- Menú móvil: no existía botón de menú en móvil (.navlinks se ocultaba
+  a partir de 950px sin ninguna alternativa). Añadido botón .menu-btn +
+  desplegable #mobileMenu con los mismos enlaces.
+- Añadido borde blanco al botón del chatbot y reposicionado por encima
+  del WhatsApp (antes el WhatsApp estaba en bottom:92px sin ningún CSS
+  que posicionara el chat; ahora WhatsApp en bottom:24px y chat en
+  bottom:96px, estándar de la familia).
+- Añadida sección de contenido SEO propio (#guia), enlazada en el menú
+  de escritorio y en el móvil.
+- Añadido meta robots (index,follow), que faltaba.
+- Ya tenía datos schema.org (ProfessionalService) y Google Analytics
+  configurados; no se han tocado más allá de lo indicado arriba sobre
+  el dominio pendiente.
