@@ -74,3 +74,16 @@ REVISIÓN (fixes aplicados):
 - Ya tenía datos schema.org (ProfessionalService) y Google Analytics
   configurados; no se han tocado más allá de lo indicado arriba sobre
   el dominio pendiente.
+
+REVISIÓN ADICIONAL (pasada posterior):
+- No aplica middleware.mjs: este repositorio nació ya como one-page,
+  nunca fue multipágina (sin eliminaciones de /servicios/ ni
+  /modelos/ en el historial).
+- .navphone ya mostraba solo el número (sin el bug de texto largo de
+  otras marcas); añadido white-space:nowrap como salvaguarda estándar.
+- Schema.org: faltaba areaServed ("Madrid") — añadido.
+- H1 de portada reescrito, corto, directo y totalmente afirmativo (sin
+  interrogación ni condicionales), incluye "Surface": "Tu Surface no
+  enciende. La reparamos y protegemos tus archivos." Tamaño del H1
+  aumentado: clamp(38-58px) → clamp(46-74px) en escritorio, 36px →
+  44px en móvil.
