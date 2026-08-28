@@ -87,3 +87,12 @@ REVISIÓN ADICIONAL (pasada posterior):
   enciende. La reparamos y protegemos tus archivos." Tamaño del H1
   aumentado: clamp(38-58px) → clamp(46-74px) en escritorio, 36px →
   44px en móvil.
+
+REVISIÓN ADICIONAL (esta pasada):
+- El H1 tenía un cambio manual reciente ("Tu Surface no Funciona.")
+  con una F mayúscula por error a mitad de frase; corregido a
+  minúscula ("Tu Surface no funciona."), respetando el cambio de
+  contenido, solo arreglando la mayúscula.
+- Verificado: og:*, sección SEO, menú móvil (ya con estilo correcto),
+  borde del chat, icono de WhatsApp (SVG, no texto) y dominio ya
+  estaban todos correctos; no se ha tocado nada más.
