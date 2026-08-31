@@ -96,3 +96,20 @@ REVISIÓN ADICIONAL (esta pasada):
 - Verificado: og:*, sección SEO, menú móvil (ya con estilo correcto),
   borde del chat, icono de WhatsApp (SVG, no texto) y dominio ya
   estaban todos correctos; no se ha tocado nada más.
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
+- H1 repetía la plantilla "no funciona. La reparamos..." usada en
+  varios repos. Reescrito con síntoma específico: "Tu Surface no
+  carga o se apaga. Lo arreglamos." (9 palabras).
+- Añadido "Sábados, domingos y días festivos estamos cerrados" debajo
+  del horario.
+- Añadida franja de aviso ("Somos un servicio técnico independiente.
+  No vemos equipos en garantía.") debajo del menú (no existía).
+- Enlace de política de privacidad: ya enlazaba a
+  https://kelatos.com/privacy-policy/, pero sin distinguirse
+  visualmente. Añadida clase .privacy-link en azul y subrayado.
+- Botón "Atención Telefónica..." sin icono, a diferencia del de
+  WhatsApp. Añadido el icono de teléfono.
+- Formulario verificado: fetch a /api/contact coincide con
+  api/contact.js; conexión correcta.
+- No existe texto decorativo tipo "HARDWARE" en este diseño; no aplica.

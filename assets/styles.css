@@ -16,9 +16,11 @@
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--surface-ink);background:#fff;line-height:1.55}
 a{text-decoration:none;color:inherit}
+.privacy-link{color:var(--surface-blue);text-decoration:underline}
 .container{width:min(1180px,calc(100% - 34px));margin:auto}
 
 .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--surface-line)}
+.disclaimer-bar{background:#fdd835;color:var(--surface-ink);text-align:center;font-size:12.5px;font-weight:800;padding:8px 16px}
 .nav{min-height:78px;display:flex;align-items:center;gap:28px}
 .brand img{width:285px;max-height:58px;object-fit:contain;object-position:left center;display:block}
 .navlinks{margin-left:auto;display:flex;align-items:center;gap:22px;font-size:14px;font-weight:800}
