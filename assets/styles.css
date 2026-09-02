@@ -56,7 +56,8 @@ a{text-decoration:none;color:inherit}
 .free-diagnosis strong{color:var(--surface-blue)}
 .free-diagnosis span{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:var(--surface-cyan);color:#fff;font-weight:900}
 .hero-actions{display:grid;grid-template-columns:1.15fr .85fr;gap:10px}
-.btn{min-height:56px;padding:13px 17px;border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900}
+.btn{min-height:56px;padding:13px 17px;border-radius:999px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;transition:filter .15s ease}
+.btn-wa:hover,.btn-blue:hover{filter:brightness(.88)}
 .btn-wa{background:var(--surface-green);color:#fff}
 .btn-blue{background:var(--surface-blue);color:#fff}
 .btn-outline{border:1px solid var(--surface-blue);background:#fff;color:var(--surface-blue)}
@@ -171,7 +172,7 @@ section{padding:82px 0}
   .container{width:min(100% - 24px,1180px)}
   .brand img{width:230px}
   .hero{padding:38px 0 54px}
-  .hero h1{font-size:44px}
+  .hero h1{font-size:48px}
   .hero-actions,.form-grid{grid-template-columns:1fr}
   .btn-wide,.field.full{grid-column:auto}
   section{padding:58px 0}

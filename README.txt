@@ -113,3 +113,33 @@ REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente)
 - Formulario verificado: fetch a /api/contact coincide con
   api/contact.js; conexión correcta.
 - No existe texto decorativo tipo "HARDWARE" en este diseño; no aplica.
+
+REVISIÓN ADICIONAL (checklist unificado de la familia + nueva regla de menú móvil, a petición del cliente):
+- BUG REAL — enlace de Cal.com desactualizado. Actualizado a
+  https://cal.com/kelatos/30min?embed=true&theme=light&attendeePhoneNumber=%2B34&overlayCalendar=true.
+- BUG REAL — soporte@kelatos.com aparecía como texto visible en la
+  caja de información de contacto. Quitado; el correo solo se usa en
+  backend.
+- BUG REAL — el mensaje prellenado de WhatsApp decía "¡Hola Kelatos!".
+  Corregido a "¡Hola SurfaceLabs!".
+- BUG REAL — el menú móvil (#mobileMenu, estilo atributo hidden) no
+  tenía ningún listener que lo cerrara al pulsar un enlace. Añadido el
+  script estándar de la familia.
+- Verificado: sin iconos ni imágenes con proporciones fijas
+  incorrectas.
+- BUG REAL — el H1 en móvil estaba en 44px. Corregido a 48px.
+- BUG REAL — botones del hero (.btn) con border-radius de 16px y sin
+  estado hover. Aumentado a border-radius:999px; añadido
+  filter:brightness(.88) en btn-wa/btn-blue (ambos de color sólido).
+- BUG REAL — la franja de aviso de independencia estaba dentro de
+  <header>, después del menú móvil desplegable (.mobile-menu, sin
+  position propio, bloque normal). Al abrir el menú, empujaba la
+  franja hacia abajo de forma incómoda. Movida fuera de <header>,
+  como hermana justo después de él y antes del hero: sigue siendo la
+  misma franja amarilla de ancho completo (sin cambios de CSS), solo
+  que ahora vive entre la cabecera y el hero en vez de dentro de la
+  cabecera.
+- Verificado: el header (.site-header{position:sticky;top:0}) ya se
+  mantenía fijo/pegado arriba al hacer scroll; no requería cambios.
+- Verificado: este repo no usa el patrón de franja de insignias bajo
+  el H1 (familia Dyson); no aplica la reubicación.
