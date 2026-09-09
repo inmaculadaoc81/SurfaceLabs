@@ -94,6 +94,15 @@ section{padding:82px 0}
 .problem:nth-child(5){margin-left:12%}
 .problem:nth-child(6){margin-left:6%}
 
+.servicios-lista{margin-top:34px;display:grid;gap:18px}
+.servicio-grupo{border:1px solid var(--surface-line);background:#fff;border-radius:18px;padding:22px 26px}
+.servicio-grupo h3{margin:0 0 6px;font-size:19px;color:var(--surface-deep)}
+.servicio-fila{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--surface-line)}
+.servicio-fila .nombre{color:var(--surface-ink)}
+.servicio-fila .precio{font-weight:900;color:var(--surface-blue);white-space:nowrap}
+.servicio-fila .precio.consultar{font-weight:700;color:#5b7282}
+.servicios-cargando,.servicios-vacio{color:#5b7282;font-size:15px}
+
 .data-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:42px;align-items:center}
 .data-quote{font-size:clamp(31px,4vw,49px);font-weight:900;line-height:1.08;letter-spacing:-.035em}
 .alert-stack{display:grid;gap:10px}
