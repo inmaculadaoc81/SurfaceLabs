@@ -18,8 +18,24 @@
 
   function formatearPrecio(precio) {
     var n = precio === null || precio === undefined || precio === "" ? null : Number(precio);
-    if (n === null || isNaN(n)) return '<span class="precio consultar">Consultar</span>';
-    return '<span class="precio">' + n.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €</span>";
+    if (n === null || isNaN(n)) return '<div class="servicio-precio consultar">Consultar precio</div>';
+    return '<div class="servicio-precio">' + n.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €</div>";
+  }
+
+  function tarjeta(p) {
+    var imagen = p.imagen_url
+      ? '<img class="servicio-img" src="' + escapeHtml(p.imagen_url) + '" alt="' + escapeHtml(p.nombre) + '" loading="lazy">'
+      : '<div class="servicio-img-placeholder" aria-hidden="true">SL</div>';
+    var modelo = p.categoria ? '<div class="servicio-modelo">' + escapeHtml(p.categoria) + "</div>" : "";
+    return (
+      '<article class="servicio-card">' +
+      imagen +
+      '<div class="servicio-body">' +
+      modelo +
+      '<h3 class="servicio-nombre">' + escapeHtml(p.nombre) + "</h3>" +
+      formatearPrecio(p.precio) +
+      "</div></article>"
+    );
   }
 
   fetch(ENDPOINT, { cache: "no-store" })
@@ -33,27 +49,7 @@
         contenedor.innerHTML = '<p class="servicios-vacio">Muy pronto publicaremos aquí el listado completo de servicios y precios. Mientras tanto, escríbenos y te lo confirmamos al momento.</p>';
         return;
       }
-
-      var grupos = {};
-      var orden = [];
-      productos.forEach(function (p) {
-        var clave = p.categoria || "Otros servicios";
-        if (!grupos[clave]) {
-          grupos[clave] = [];
-          orden.push(clave);
-        }
-        grupos[clave].push(p);
-      });
-
-      var html = "";
-      orden.forEach(function (clave) {
-        html += '<div class="servicio-grupo"><h3>' + escapeHtml(clave) + "</h3>";
-        grupos[clave].forEach(function (p) {
-          html += '<div class="servicio-fila"><span class="nombre">' + escapeHtml(p.nombre) + "</span>" + formatearPrecio(p.precio) + "</div>";
-        });
-        html += "</div>";
-      });
-      contenedor.innerHTML = html;
+      contenedor.innerHTML = productos.map(tarjeta).join("");
     })
     .catch(function () {
       // Fallo de red/API: se oculta la sección entera en vez de mostrar

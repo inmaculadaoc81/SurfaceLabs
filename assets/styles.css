@@ -94,13 +94,15 @@ section{padding:82px 0}
 .problem:nth-child(5){margin-left:12%}
 .problem:nth-child(6){margin-left:6%}
 
-.servicios-lista{margin-top:34px;display:grid;gap:18px}
-.servicio-grupo{border:1px solid var(--surface-line);background:#fff;border-radius:18px;padding:22px 26px}
-.servicio-grupo h3{margin:0 0 6px;font-size:19px;color:var(--surface-deep)}
-.servicio-fila{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--surface-line)}
-.servicio-fila .nombre{color:var(--surface-ink)}
-.servicio-fila .precio{font-weight:900;color:var(--surface-blue);white-space:nowrap}
-.servicio-fila .precio.consultar{font-weight:700;color:#5b7282}
+.servicios-lista{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.servicio-card{border:1px solid var(--surface-line);background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.servicio-card .servicio-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--surface-soft)}
+.servicio-card .servicio-img-placeholder{width:100%;aspect-ratio:4/3;display:grid;place-items:center;background:var(--surface-soft);color:var(--surface-blue);font-size:30px;font-weight:900}
+.servicio-card .servicio-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.servicio-card .servicio-modelo{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--surface-cyan)}
+.servicio-card .servicio-nombre{font-size:16px;font-weight:800;margin:0 0 4px;color:var(--surface-ink);flex:1}
+.servicio-card .servicio-precio{margin-top:auto;padding-top:10px;border-top:1px solid var(--surface-line);font-weight:900;color:var(--surface-blue);font-size:19px}
+.servicio-card .servicio-precio.consultar{color:#5b7282;font-size:14px;font-weight:700}
 .servicios-cargando,.servicios-vacio{color:#5b7282;font-size:15px}
 
 .data-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:42px;align-items:center}
@@ -173,6 +175,7 @@ section{padding:82px 0}
   .problem:nth-child(n){margin-left:0}
   .process{grid-template-columns:1fr;gap:20px}.process::before{display:none}
   .proof-grid,.faq{grid-template-columns:1fr}
+  .servicios-lista{grid-template-columns:repeat(2,1fr)}
   .calendar-intro .section-head{position:static}
   .calendar iframe{height:860px}
   .footer-grid{grid-template-columns:1fr}
@@ -184,6 +187,7 @@ section{padding:82px 0}
   .hero h1{font-size:48px}
   .hero-actions,.form-grid{grid-template-columns:1fr}
   .btn-wide,.field.full{grid-column:auto}
+  .servicios-lista{grid-template-columns:1fr}
   section{padding:58px 0}
   .free-diagnosis{border-radius:18px}
   .pickup-shape{min-height:260px}
