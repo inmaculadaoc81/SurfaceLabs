@@ -59,6 +59,7 @@ a{text-decoration:none;color:inherit}
 .btn{min-height:56px;padding:13px 17px;border-radius:999px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;transition:filter .15s ease}
 .btn-wa:hover,.btn-blue:hover{filter:brightness(.88)}
 .btn-wa{background:var(--surface-green);color:#fff}
+.btn-quote{background:#17a398;color:#fff}
 .btn-blue{background:var(--surface-blue);color:#fff}
 .btn-outline{border:1px solid var(--surface-blue);background:#fff;color:var(--surface-blue)}
 .btn-wide{grid-column:1/-1}
