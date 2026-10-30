@@ -84,16 +84,11 @@ section{padding:82px 0}
 .section-head p{font-size:18px;color:#5b7282}
 .deep .section-head p,.deep p{color:#c6d9e4}
 
-.problem-ribbon{margin-top:34px;display:grid;gap:12px}
+.problem-ribbon{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .problem{position:relative;padding:18px 20px 18px 64px;border:1px solid var(--surface-line);background:#fff;border-radius:18px;min-height:92px}
 .problem .icon{position:absolute;left:17px;top:18px;width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:#eaf7fd;color:var(--surface-blue);font-size:18px}
 .problem h3{margin:0 0 5px;font-size:21px}
 .problem p{margin:0;color:#5b7282}
-.problem:nth-child(2){margin-left:6%}
-.problem:nth-child(3){margin-left:12%}
-.problem:nth-child(4){margin-left:18%}
-.problem:nth-child(5){margin-left:12%}
-.problem:nth-child(6){margin-left:6%}
 
 .servicios-lista{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .servicio-card{border:1px solid var(--surface-line);background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
@@ -173,7 +168,7 @@ section{padding:82px 0}
   .menu-btn{display:block}
   .hero-grid,.data-layout,.pickup-layout,.calendar-intro,.contact-layout{grid-template-columns:1fr}
   .hero-copy{order:1}.info-card{order:2}
-  .problem:nth-child(n){margin-left:0}
+  .problem-ribbon{grid-template-columns:1fr}
   .process{grid-template-columns:1fr;gap:20px}.process::before{display:none}
   .proof-grid,.faq{grid-template-columns:1fr}
   .servicios-lista{grid-template-columns:repeat(2,1fr)}
